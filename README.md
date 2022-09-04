@@ -27,7 +27,17 @@ python autoplay.py
 
 ## 扩展
 可以自己在程序里面添加想要弹奏的歌曲乐谱（b站有很多），然后将toPlay改为要演奏的歌曲，再自己调节一下节奏即可（代码中均有注释）
-
+***调试节奏原理***：一个括号中的当作一个音符，不在括号中的一个字母当作一个字符，空格作为一次小停顿，反斜杠'\'当作一次大停顿。如下代码有三个数字，第一个是小停顿的时间，第二个是大停顿的时间，最后一个是每个音符的停顿时间，据此调试
+```Python
+for i in range(notesNum):
+    if notes[i]==" ":
+        time.sleep(0.04)
+        continue
+    if notes[i]=='/':
+        time.sleep(0.06)
+        continue
+    pyautogui.write(notes[i],0.02)
+```
 
 
 ## -   Environment to prepare
@@ -57,3 +67,14 @@ python autoplay.py
 
 ## Extension
 You can add the music you want to play in the program (there are many in www.bilibili.com), then change ***toPlay*** to the music you want to play, and then adjust the rhythm by yourself (there are comments in the code).
+***Adjusting rhythm principle*** : A letter in parentheses is treated as a note, a letter not in parentheses is treated as a character, a space is treated as a small pause, and a backslash '\' is treated as a large pause. The following code has three numbers, the first is the time for a small pause, the second is the time for a large pause, and the last is the time for each note to pause. Adjust accordingly
+```Python
+for i in range(notesNum):
+    if notes[i]==" ":
+        time.sleep(0.04)
+        continue
+    if notes[i]=='/':
+        time.sleep(0.06)
+        continue
+    pyautogui.write(notes[i],0.02)
+```
