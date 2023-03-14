@@ -1,4 +1,4 @@
-# -Playing-the-harp-automatically-in-Genshin-
+# Playing-the-harp-automatically-in-Genshin
 实现原神自动弹琴的python脚本（Implementation of the Genshin automatic  playing harp Python script）
 ## 环境准备
 1、如果电脑没有python环境先安装python3以上版本(或Anaconda，建议还是安装python)
